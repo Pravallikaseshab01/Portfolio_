@@ -9,34 +9,56 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 31 21% 11%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 31 21% 11%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
+    --popover-foreground: 31 21% 11%;
+    
+    --primary: 31 21% 11%;
     --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
+    
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 31 21% 11%;
+    
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Portfolio specific design tokens */
+    --text-primary: 31 21% 11%;
+    --text-secondary: 215 16% 47%;
+    --text-muted: 220 9% 46%;
+    
+    --bg-secondary: 248 250% 97%;
+    --footer-bg: 222 47% 11%;
+    
+    --blue-accent: 217 91% 60%;
+    --purple-accent: 250 84% 70%;
+    --green-accent: 142 76% 36%;
+    --orange-accent: 25 95% 53%;
+    --pink-accent: 330 81% 60%;
+    --teal-accent: 173 58% 39%;
+    
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-hero: 0 20px 40px rgba(0, 0, 0, 0.1);
+    
+    --transition-smooth: all 0.2s ease;
+    --transition-transform: transform 0.2s ease;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +122,55 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .portfolio-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-header {
+    @apply text-center mb-16;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-foreground mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto;
+  }
+  
+  .section-divider {
+    @apply w-20 h-1 bg-accent mx-auto mt-6 rounded-full;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-xl font-medium transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-accent border border-accent hover:bg-accent hover:text-accent-foreground px-6 py-3 rounded-xl font-medium transition-all duration-200;
+  }
+  
+  .skill-badge {
+    @apply px-3 py-1 rounded-md text-sm font-medium;
   }
 }

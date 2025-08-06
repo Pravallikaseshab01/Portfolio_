@@ -54,7 +54,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-secondary">
+    <section id="contact" className="py-20 bg-secondary dark:bg-card">
       <div className="portfolio-container">
         <div className="section-header">
           <h2 className="section-title">Let's Connect</h2>
@@ -67,7 +67,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-xl p-8 border border-border"
+            <div className="bg-card rounded-xl p-8 border border-border"
               style={{ boxShadow: 'var(--shadow-elevated)' }}>
               <h3 className="text-2xl font-semibold text-foreground mb-8">Send Me a Message</h3>
               
@@ -125,7 +125,7 @@ const ContactSection = () => {
                 href={info.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white rounded-xl p-6 border border-border card-hover"
+                className="block bg-card rounded-xl p-6 border border-border card-hover"
                 style={{ boxShadow: 'var(--shadow-card)' }}
               >
                 <div className="flex items-center">
@@ -147,9 +147,11 @@ const ContactSection = () => {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Ready to Hire?</h3>
               <p className="text-muted-foreground mb-6">Download my latest resume</p>
-              <Button className="btn-primary">
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
+              <Button className="btn-primary" asChild>
+                <a href="https://drive.google.com/file/d/sample-resume-link/view" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </a>
               </Button>
             </div>
 

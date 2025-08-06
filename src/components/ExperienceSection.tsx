@@ -5,12 +5,12 @@ const ExperienceSection = () => {
     {
       id: 1,
       title: "Software Engineer Intern",
-      company: "Turtil", 
-      duration: "May 2025 - June 2025",
+      company: "Tunel", 
+      duration: "May 2023 - July 2023",
       location: "Remote",
       type: "Internship",
-      description: "Developed AI-powered profile attention simulation engine using FastAPI and Python",
-      technologies: ["FastAPI", "Docker", "PostMan", "AI/ML", "Python"],
+      description: "Developed AI-powered recruiter attention engine using FastAPI and Docker",
+      technologies: ["FastAPI", "Docker", "Solr", "AI/ML", "Python"],
       icon: Code,
       color: "bg-blue-500",
       position: "right"
@@ -23,49 +23,36 @@ const ExperienceSection = () => {
       location: "Remote",
       type: "Internship",
       description: "Built machine learning models and interactive dashboards for data visualization",
-      technologies: ["XGBoost", "Flask", "Streamlit", "Python", "Data Science", "Machine Learning"],
+      technologies: ["XGBoost", "Flask", "Streamlit", "Python", "Data Science"],
       icon: BarChart,
       color: "bg-green-500",
       position: "left"
     },
     {
       id: 3,
-      title: "ML Intern",
-      company: "Slash Mark IT",
-      duration: "Oct 2024 – Dec 2024",
-      location: "Remote",
-      type: "Internship",
-      description: "Built machine learning models and interactive dashboards for data visualization",
-      technologies: ["XGBoost", "Flask", "Streamlit", "Python", "Data Science"],
-      icon: BarChart,
-      color: "bg-teal-500",
-      position: "right"
-    },
-    {
-      id: 4,
       title: "Infosys Pragati Cohort",
       company: "Infosys",
-      duration: "Jul 2024 – Nov 2024",
+      duration: "Jul 2024 - Nov 2024",
       location: "Hybrid",
       type: "Training Program", 
       description: "Intensive training program covering GenAI, Java, and Python with leadership opportunities",
       technologies: ["GenAI", "Java", "Python", "Leadership", "Mentoring"],
       icon: BookOpen,
       color: "bg-purple-500",
-      position: "left"
+      position: "right"
     },
     {
-      id: 5,
+      id: 4,
       title: "Web Developer Intern",
       company: "CodSoft",
-      duration: "Apr 2024 – May 2024",
+      duration: "Apr 2024 - May 2024",
       location: "Remote", 
       type: "Internship",
       description: "Developed responsive web applications and mini-projects using modern web technologies",
-      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX"],
       icon: Globe,
       color: "bg-orange-500",
-      position: "right"
+      position: "left"
     }
   ];
 
@@ -89,7 +76,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-secondary dark:bg-card">
+    <section id="experience" className="py-20 bg-secondary">
       <div className="portfolio-container">
         <div className="section-header">
           <h2 className="section-title">Professional Experience</h2>
@@ -100,7 +87,7 @@ const ExperienceSection = () => {
         {/* Timeline */}
         <div className="relative max-w-6xl mx-auto mb-16">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-accent"></div>
+          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-border"></div>
 
           {experiences.map((exp, index) => (
             <div key={exp.id} className={`relative flex items-center mb-16 ${
@@ -111,7 +98,7 @@ const ExperienceSection = () => {
               
               {/* Content Card */}
               <div className={`w-full md:w-5/12 ${exp.position === 'left' ? 'md:ml-auto md:pl-8' : 'md:pr-8'}`}>
-                <div className="bg-card rounded-xl p-6 border border-border card-hover"
+                <div className="bg-white rounded-xl p-6 border border-border card-hover"
                   style={{ boxShadow: 'var(--shadow-card)' }}>
                   
                   <div className="flex items-center mb-4">

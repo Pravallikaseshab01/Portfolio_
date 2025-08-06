@@ -101,7 +101,11 @@ const Footer = () => {
         <div className="border-t border-slate-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-slate-400 text-sm">
-              © 2025 S. Sri Pravallika.
+              © 2025 S. Sri Pravallika. Made with ❤️ and lots of coffee ☕
+            </div>
+            
+            <div className="text-slate-400 text-sm text-center">
+              Built with React.js, Tailwind CSS, and Shadcn/UI • Hosted with ❤️
             </div>
             
             <Button

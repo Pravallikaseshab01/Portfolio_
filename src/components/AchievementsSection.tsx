@@ -6,54 +6,49 @@ const AchievementsSection = () => {
       id: 1,
       title: "Internal First Round SIH Winner – Smart India Hackathon 2024",
       category: "Competition",
-      categoryColor: "bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400",
+      categoryColor: "bg-orange-100 text-orange-800",
       icon: Trophy,
       iconColor: "bg-orange-500",
-      emoji: "🥇",
-      date: "Winner",
+      date: "2024",
       description: "Achieved first place in the internal first round of Smart India Hackathon 2024, competing against thousands of teams from across India. Developed an innovative AI-powered solution that addressed real-world problems and impressed industry experts."
     },
     {
       id: 2,
-      title: "Organizer – 3-Day College Fest (PraJWalan 2K24)",
+      title: "Organizer – 3-Day College Fest (PrajWalan 2024)",
       category: "Leadership", 
-      categoryColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-400",
+      categoryColor: "bg-purple-100 text-purple-800",
       icon: Star,
       iconColor: "bg-purple-500",
-      emoji: "🏆",
-      date: "Organizer",
-      description: "Successfully organized and managed the college fest at VMTW with 500+ participants"
+      date: "2024",
+      description: "Successfully organized and managed the college fest at VUTW with 500+ participants"
     },
     {
       id: 3,
       title: "Infosys Pragati Cohort Member",
       category: "Professional",
-      categoryColor: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400", 
+      categoryColor: "bg-green-100 text-green-800", 
       icon: Award,
       iconColor: "bg-green-500",
-      emoji: "💼",
-      date: "Selected",
+      date: "2024",
       description: "Selected as a member of the exclusive Infosys Pragati program for leadership development"
     },
     {
       id: 4,
       title: "NSS Volunteer",
       category: "Service",
-      categoryColor: "bg-pink-100 text-pink-800 dark:bg-pink-900/20 dark:text-pink-400",
+      categoryColor: "bg-pink-100 text-pink-800",
       icon: Heart,
       iconColor: "bg-pink-500", 
-      emoji: "🤝",
-      date: "Volunteer",
+      date: "Multi-year",
       description: "Active volunteer in National Service Scheme contributing to community service"
     },
     {
       id: 5,
       title: "State-Level Kho Kho Player",
       category: "Sports",
-      categoryColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400",
+      categoryColor: "bg-blue-100 text-blue-800",
       icon: Medal,
       iconColor: "bg-blue-500",
-      emoji: "🥈",
       date: "State Level",
       description: "Represented the state in Kho Kho competitions, demonstrating teamwork and athletics"
     }
@@ -62,8 +57,8 @@ const AchievementsSection = () => {
   const statisticsRow = [
     { icon: "🏆", number: "1", label: "National Hackathon Win" },
     { icon: "👥", number: "500+", label: "Fest Participants Managed" },
-    { icon: "💝", number: "3", label: "Years of NSS Service" },
-    { icon: "🏃‍♀️", number: "1", label: "State Sports Achievement" }
+    { icon: "❤️", number: "3", label: "Years of NSS Service" },
+    { icon: "🥇", number: "1", label: "State Sports Achievement" }
   ];
 
   return (
@@ -82,7 +77,7 @@ const AchievementsSection = () => {
           {achievements.map((achievement) => (
             <div
               key={achievement.id}
-              className="bg-card rounded-xl p-6 border border-border card-hover"
+              className="bg-white rounded-xl p-6 border border-border card-hover"
               style={{ boxShadow: 'var(--shadow-card)' }}
             >
               <div className="flex items-start mb-4">
@@ -118,7 +113,7 @@ const AchievementsSection = () => {
         </div>
 
         {/* Special Highlight Banner */}
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-8 text-center">
+        <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-8 text-center">
           <div className="text-6xl mb-4">🏆</div>
           <h3 className="text-2xl font-bold text-foreground mb-4">
             Internal First Round SIH Winner – Smart India Hackathon 2024
